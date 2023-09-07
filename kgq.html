@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Tourism</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #183D3D;
+      padding: 20px;
+      font-family: Arial;
+    }
+    
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+#carouselAutoplaying{
+  left: 5%;
+}
+    .district-image{
+      width: 400px;
+      height: 300px;
+    }
+    #description{
+      padding-left: 10% ;
+    }
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+</head>
+<body>
+
+<section class="head">
+  <div class="container-fluid"> 
+   <!-- Nav Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <a class="navbar-brand" href="">Kerala Tourism</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="districtsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Districts
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="districtsDropdown">
+            <li><a id="kgq" class="dropdown-item" href="kgq.html">Kasaragod</a></li>
+            <li><a class="dropdown-item" href="district.html">Kannur</a></li>
+            <li><a id="clt" class="dropdown-item" href="clt.html">Kozhikode</a></li>
+            <li><a id="wyd" class="dropdown-item" href="district.html">Wayanad</a></li>
+            <li><a class="dropdown-item" href="district.html">Malappuram</a></li>
+            <li><a class="dropdown-item" href="district.html">Palakkad</a></li>
+            <li><a class="dropdown-item" href="district.html">Thrissur</a></li>
+            <li><a id="ekm" class="dropdown-item" href="ekm.html">Eranakulam</a></li>
+            <li><a class="dropdown-item" href="district.html">Alappuzha</a></li>
+            <li><a class="dropdown-item" href="district.html">Pathanamthitta</a></li>
+            <li><a class="dropdown-item" href="district.html">Idukki</a></li>
+            <li><a id="ktym" class="dropdown-item" href="ktym.html">Kottayam</a></li>
+            <li><a class="dropdown-item" href="district.html">Kollam</a></li>
+            <li><a id="tvc" class="dropdown-item" href="tvc.html">Trivandrum</a></li>
+          </ul>
+        </ul>
+    </div>
+  </nav>
+</section>
+
+<div class="container mt-4">
+    <h1 class="welcome-message">Welcome to Kasaragod</h1>
+</div>
+
+<div class="row">
+  <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="district-image"  src="https://www.keralatourism.org/images/destination/mobile/aquatourism_in_kasaragod20131107114603_306_1.jpg" class="d-block w-100" alt="Kasaragod1">
+      </div>
+      <div class="carousel-item" >
+        <img class="district-image" src="https://static.javatpoint.com/tourist-places/images/tourist-places-in-kasaragod2.jpg" class="d-block w-100" alt="Kasaragod2">
+      </div>
+   </div>
+  </div>
+  <div class="column" id="description">
+    <div class="content" >
+      <p>Kasaragod is a municipal town and administrative headquarters of Kasaragod district in the state of Kerala, India. Established in 1966, Kasaragod was the first municipal town in the district. It is the northernmost district of Kerala and is also known as Saptha Bhasha Sangama Bhoomi. Situated in the rich biodiversity of Western Ghats, it is known for the Chandragiri and Bekal Fort, Chandragiri River, historic Kolathiri Rajas, natural environment of Ranipuram and Kottancheri Hills, historical and religious sites like the Madiyan Kulom temple, Madhur Temple, Ananthapuram Lake Temple and Malik Deenar Mosque. The historic hill of Ezhimala is located on the southern portion of Kavvayi Backwaters of Nileshwaram</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img class="imagegrid" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/4c/25/74/bekal-fort.jpg?w=1200&h=-1&s=1" alt="Bekalfort" style="width:100%">
+      <h3>Bekalfort</h3>
+      <p>Kasaragod boasts of the largest and best preserved Fort in the whole of Kerala, bordered by a magnificent beach. Shaped like a giant keyhole, the historic Bekal Fort was built in the 17th century.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img class="imagegrid" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/c9/7b/10/ranipuram-hills.jpg?w=1200&h=1200&s=1" alt="Ranipuram" style="width:100%">
+      <h3>Ranipuram</h3>
+      <p>Ranipuram is a village and a major tourist attraction in the Kasaragod district of the Indian state of Kerala. It is located near Talakaveri Wildlife Sanctuary in Kerala-Karnataka border.</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  
+  

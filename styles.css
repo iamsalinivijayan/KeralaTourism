@@ -1,0 +1,135 @@
+.fixed-bg {
+  background-image: url('https://images.thequint.com/thequint%2F2022-11%2F61b6e8fb-7c72-4ee1-801e-ed627784acea%2FiStock_1205881053.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+.imagegrid{
+  height: 250px;
+  width: 250px;
+}
+
+.container-fluid{
+  size: 50%;
+} 
+
+
+.navbar {
+  padding: 0 0 5px ;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+/* Dropdown menu styling*/
+#kgq , #clt, #ekm, #ktym, #tvc{
+  color: #1A5D1A;
+  font-weight: bold;
+}
+
+/* Animation Start*/
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.welcome-message {
+  color: aliceblue;
+  animation: slideIn 1s ease-out; 
+
+}
+
+/* Animation end */
+
+button {
+  position: absolute;
+  background-color: yellowgreen;  
+  border-radius: 5px;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+  
+button:hover, button:focus {
+  background-color: #141E46;
+  color: White;
+}
+
+@media screen and (min-width: 601px) {
+  #signInButton {
+    width: 250px; height: 65px; 
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #signInButton {
+    width: 350px; height: 75px;
+    margin-top: 10px;
+  }
+}
+
+.error {
+  color: red;
+}
+
+.warning {
+  color: orange;
+}
+
+.success {
+  color: green;
+}
+.signUpHeading, .signInHeading{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  right: 20%;
+  color: aliceblue;
+}
+
+#signupForm, #loginForm{
+  color: aliceblue;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  right: 20%;
+  justify-content: space-between;
+}
+  
+
+#confirm-password{
+  width: 200%;
+}
+
+
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Tourism</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: #183D3D;
+      padding: 20px;
+      font-family: Arial;
+    }
+    
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    
+    #carouselAutoplaying{
+  left: 5%;
+}
+    .district-image{
+      width: 400px;
+      height: 300px;
+    }
+    #description{
+      top: 10%;
+      padding-left: 10% ;
+    }
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+
+
+</head>
+<body>
+
+<section class="head">
+  <div class="container-fluid"> 
+   <!-- Nav Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <a class="navbar-brand" href="">Kerala Tourism</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="districtsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Districts
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="districtsDropdown">
+            <li><a id="kgq" class="dropdown-item" href="kgq.html">Kasaragod</a></li>
+            <li><a class="dropdown-item" href="district.html">Kannur</a></li>
+            <li><a id="clt" class="dropdown-item" href="clt.html">Kozhikode</a></li>
+            <li><a id="wyd" class="dropdown-item" href="district.html">Wayanad</a></li>
+            <li><a class="dropdown-item" href="district.html">Malappuram</a></li>
+            <li><a class="dropdown-item" href="district.html">Palakkad</a></li>
+            <li><a class="dropdown-item" href="district.html">Thrissur</a></li>
+            <li><a id="ekm" class="dropdown-item" href="ekm.html">Eranakulam</a></li>
+            <li><a class="dropdown-item" href="district.html">Alappuzha</a></li>
+            <li><a class="dropdown-item" href="district.html">Pathanamthitta</a></li>
+            <li><a class="dropdown-item" href="district.html">Idukki</a></li>
+            <li><a id="ktym" class="dropdown-item" href="ktym.html">Kottayam</a></li>
+            <li><a class="dropdown-item" href="district.html">Kollam</a></li>
+            <li><a id="tvc" class="dropdown-item" href="tvc.html">Trivandrum</a></li>
+          </ul>
+      </ul>
+
+    </div>
+  </nav>
+</section>
+
+<div class="container mt-4">
+    <h1 class="welcome-message">Welcome to Kozhikode</h1>
+</div>
+
+
+<div class="row">
+  <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="district-image"  src="https://pyt-blogs.imgix.net/2020/07/photo-1580046345567-8b5d44d8cbab.jpg?auto=format&ixlib=php-3.3.0" class="d-block w-100" alt="Kozhikode1">
+      </div>
+      <div class="carousel-item" >
+        <img class="district-image" src="https://pix10.agoda.net/hotelImages/551718/-1/1a6a28adc0340ee7ec563feed827a65b.png?ce=0&s=702x392" class="d-block w-100" alt="Kozhikode2">
+      </div>
+   </div>
+  </div>
+  <div class="column" id="description">
+    <div class="content" >
+      <p>Kozhikode, also known in English as Calicut, is a city along the Malabar Coast in the state of Kerala in India. Kozhikode is classified as a Tier 2 city by the Government of India. It is the largest city in the region known as the Malabar and was the capital of the British-era Malabar district. In antiquity and the medieval period, Kozhikode was dubbed the City of Spices for its role as the major trading point for Indian spices. It was the capital of an independent kingdom ruled by the Samoothiris (Zamorins). The port at Kozhikode acted as the gateway to medieval South Indian coast for the Chinese, the Persians, the Arabs and finally the Europeans.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img class="imagegrid" src="https://i0.wp.com/neokerala.com/wp-content/uploads/2017/01/08.jpg?fit=1600%2C1195&ssl=1" alt="Thusharagiri" style="width:100%">
+      <h3>Thusharagiri</h3>
+      <p>Thusharagiri Falls is a waterfall located in Kozhikode district in the Indian state of Kerala, India. Two streams originating from the Western Ghats meet here to form the Chalippuzha River.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img class="imagegrid" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/View_point_of_Thamarassery_Churam.jpg" alt="Thamarasserichuram" style="width:100%">
+      <h3>Thamarasserichuram</h3>
+      <p>The route via the Thamarassery ghat was found with the help of Karinthandan.It is believed that he was later shot to death. It is also believed that Karinthandan's ghost haunted the travellers for a while until it was nailed to a tree by a wizard.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img class="imagegrid" src="https://www.mathrubhumi.com/image/contentid/policy:1.8107247:1670252119/kariyathumpara.jpg?$p=1e34cf3&f=16x9&w=1080&q=0.8" alt="Kariyathumpara" style="width:100%">
+      <h3>Kariyathumpara</h3>
+      <p>Kariathumpara is a beautiful cool place, almost like a hill station. It is in Kozhikode District of Kerala, and is just 45 kilometers away from the Kozhikode city.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+      <img class="imagegrid" src="https://www.makemytraveling.com/Images/1/PayyoliBeach-097111.webp" alt="KozhikodeBeach" style="width:100%">
+      <h3>KozhikodeBeach</h3>
+      <p>Kozhikode Beach or Calicut Beach is a beach on the western side of Kozhikode, situated on the Malabar Coast of India. The beach is accessible through four road overbridges in the city.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  
+  
