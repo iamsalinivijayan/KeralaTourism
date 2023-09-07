@@ -63,15 +63,53 @@ function viewLogin() {
         e.preventDefault();
         if (document.getElementById("passwordError").innerHTML == "Strong password") {
             alert('Successfully logged in')
+            location.replace("./home.html")
             return 'strong';
         }
     });
 
-    document.getElementById('loginForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (document.getElementById("passwordError").innerHTML == "Strong password") {
-            alert('Successfully logged in')
+    function validateLoginForm(){
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const password = document.getElementById("password").value;
+
+        // Email Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById("emailError").innerHTML = "Invalid email address";
+        } else {
+            document.getElementById("emailError").innerHTML = "";
         }
-    });
+
+        // Phone Number Validation
+        const phoneRegex = /^(?:\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
+        if (!phoneRegex.test(phone)) {
+            document.getElementById("phoneError").innerHTML = "Invalid phone number";
+        } else {
+            document.getElementById("phoneError").innerHTML = "";
+        }
+
+        // Password Validation
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        if (!passwordRegex.test(password)) {
+            document.getElementById("passwordError").innerHTML = "Invalid password";
+        } else {
+            document.getElementById("passwordError").innerHTML = "";
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (document.getElementById("passwordError").innerHTML == "") {
+                alert('Successfully logged in')
+                location.replace("./home.html")
+                return 'strong';
+            }
+        });
+    
+    }
+
+
+
+    
 
 
